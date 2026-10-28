@@ -70,11 +70,11 @@ SCENES = [
         "tag": "硬核体验 · 全安卓品牌通用自适应",
         "title": "戳一下，秒开直达",
         "subtitle": "跨品牌自动匹配官方应用商店协议",
-        "text": "在桌面戳一下，0.1 秒透明跳板直达系统更新列表，点击全部升级即刻搞定！小米、华为、OPPO、vivo、荣耀全品牌通用！",
+        "text": "在桌面戳一下，0.1 秒透明跳板直达系统更新列表，点击全部升级即刻搞定！小米、OPPO、vivo、荣耀等主流安卓品牌通用！",
         "cards": [
             ("⚡ 小米 / 红米 (HyperOS / MIUI)", "专属 Intent 协议直达更新列表"),
-            ("⚡ 华为 / 荣耀 (鸿蒙 / MagicOS)", "自适应呼起官方 AppGallery 升级页"),
-            ("⚡ OPPO / vivo / 三星 (ColorOS / OriginOS)", "无缝兼容主流各家系统应用中心")
+            ("⚡ 荣耀 / 三星 (MagicOS / One UI)", "自适应呼起官方市场升级页"),
+            ("⚡ OPPO / vivo (ColorOS / OriginOS)", "无缝兼容主流各家系统应用中心")
         ],
         "badge_color": "#52C41A"
     },

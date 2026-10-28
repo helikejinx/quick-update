@@ -17,15 +17,13 @@ last_verified: 2026-10-28
 
 ## 探测与分发策略
 
-调度引擎在 `onCreate` 中按厂商优先级单次执行，一旦任意协议拉起成功即标记 `launched = true` 并中断后续分支：
+调度引擎在 `onCreate` 中按厂商优先级单次执行，一旦任意协议拉起成功即标记 `launched = true` 并中断后续分支。目前小米（MIUI / HyperOS）已实测验证通过，其余品牌为社区候选协议（待真机进一步回归验证）：
 
 ```mermaid
 flowchart TD
     Launch["用户点击图标 (onCreate)"] --> Xiaomi{"探测 com.xiaomi.market"}
     Xiaomi -- "存在" --> TryMi["尝试 com.xiaomi.market.UPDATE_APP_LIST<br>失败回退 mimarket://update"]
-    Xiaomi -- "不存在" --> Huawei{"探测 com.huawei.appmarket"}
-    Huawei -- "存在" --> TryHw["尝试 appmarket://appUpdates<br>失败回退 market://updates"]
-    Huawei -- "不存在" --> Honor{"探测 com.hihonor.appmarket"}
+    Xiaomi -- "不存在" --> Honor{"探测 com.hihonor.appmarket"}
     Honor -- "存在" --> TryHonor["尝试 honorappmarket://appUpdates"]
     Honor -- "不存在" --> Oppo{"探测 com.heytap.market / com.oppo.market"}
     Oppo -- "存在" --> TryOppo["尝试 heytapmarket://update / oppomarket://update"]
@@ -36,13 +34,15 @@ flowchart TD
     Samsung -- "不存在" --> Fallback["通用兜底：按优先级启动系统预装市场主入口"]
     
     TryMi --> Finish["finish() 退出进程"]
-    TryHw --> Finish
     TryHonor --> Finish
     TryOppo --> Finish
     TryVivo --> Finish
     TrySamsung --> Finish
     Fallback --> Finish
 ```
+
+> [!NOTE]
+> **兼容性边界**：本项目不支持华为及 HarmonyOS（包括鸿蒙纯血系统 HarmonyOS NEXT 及华为应用市场生态），已从探测链中完全移除。
 
 ## 异常与容灾设计
 

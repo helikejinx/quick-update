@@ -6,7 +6,7 @@
 
 ## 💡 为什么需要它？
 
-目前主流安卓手机（小米、华为、OPPO、vivo 等）的系统自带“自动更新”机制普遍存在以下痛点：
+目前主流安卓手机（小米、OPPO、vivo、荣耀等）的系统自带“自动更新”机制普遍存在以下痛点：
 1. **隐形门槛极高**：系统底层调度通常强制要求 **【插着充电器 + 凌晨深睡时段（2:00~6:00）+ 手机完全静止（Deep Doze）】**；
 2. **只要有一个条件不满足，自动更新就会无限期推迟**，导致手机常年积压几十甚至上百个待更新应用；
 3. 手动更新又极其繁琐：必须点进应用商店 → 等待几秒开屏摇一摇广告 → 关掉首页弹窗 → 切换到“我的” → 找到“应用更新”。
@@ -21,14 +21,14 @@
 * **🛡️ 纯粹安全**：
   * **0 权限声明**：无需网络权限、无需存储权限、无需设备信息，完全透明。
   * **0 后台驻留**：呼起系统商店后立即 `finish()` 退出进程，不消耗任何电量与内存。
-* **📱 全品牌自适应**：
-  * **小米 / 红米 (Xiaomi / Redmi / POCO)**：HyperOS / MIUI 专属协议直达。
-  * **华为 (Huawei)**：HarmonyOS / EMUI 华为应用市场直达。
-  * **荣耀 (Honor)**：MagicOS 荣耀应用市场直达。
-  * **OPPO / 一加 / realme**：ColorOS 软件商店直达。
-  * **vivo / iQOO**：OriginOS 应用商店直达。
-  * **三星 (Samsung)**：One UI Galaxy Store 直达。
+* **📱 厂商应用商店适配（实测状态）**：
+  * **小米 / 红米 (Xiaomi / Redmi / POCO)**：HyperOS / MIUI 专属协议直达【已真机实测通过】。
+  * **OPPO / 一加 / realme**：ColorOS 软件商店专属协议直达【待真机验证】。
+  * **vivo / iQOO**：OriginOS 应用商店专属协议直达【待真机验证】。
+  * **荣耀 (Honor)**：MagicOS 荣耀应用市场直达【待真机验证】。
+  * **三星 (Samsung)**：One UI Galaxy Store 直达【待真机验证】。
   * **通用兜底**：智能识别本地预装的官方市场，安全唤醒。
+  > ⚠️ **注意**：本项目不支持华为及 HarmonyOS（包括鸿蒙纯血系统 HarmonyOS NEXT 及华为应用市场生态）。
 * **📦 极简轻量**：整包体积仅约 **12 KB**（比一张聊天截图还小）。
 
 ---
@@ -41,7 +41,7 @@
          ▼
 [ QuickUpdate (Transparent Activity) ]
          │
-         ├─ 1. 检测本地系统预装的应用商店品牌 (Xiaomi/Huawei/OPPO/vivo/Samsung...)
+         ├─ 1. 检测本地系统预装的应用商店品牌 (Xiaomi/OPPO/vivo/Honor/Samsung...)
          ├─ 2. 构造专属更新 Intent / Deep Link (如 `com.xiaomi.market.UPDATE_APP_LIST`)
          ├─ 3. 向系统 AMS 抛出直达意图，直冲更新界面
          │

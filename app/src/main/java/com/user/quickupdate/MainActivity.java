@@ -23,40 +23,34 @@ public class MainActivity extends Activity {
                     || tryUri("mimarket://update");
         }
 
-        // 2. 华为 (HarmonyOS / EMUI)
-        if (!launched && isInstalled(pm, "com.huawei.appmarket")) {
-            launched = tryUri("appmarket://appUpdates")
-                    || tryUri("market://updates");
-        }
-
-        // 3. 荣耀 (MagicOS)
+        // 2. 荣耀 (MagicOS)
         if (!launched && isInstalled(pm, "com.hihonor.appmarket")) {
             launched = tryUri("honorappmarket://appUpdates")
                     || tryUri("market://updates");
         }
 
-        // 4. OPPO / 一加 / realme (ColorOS)
+        // 3. OPPO / 一加 / realme (ColorOS)
         if (!launched && (isInstalled(pm, "com.heytap.market") || isInstalled(pm, "com.oppo.market"))) {
             launched = tryUri("heytapmarket://update")
                     || tryUri("oppomarket://update");
         }
 
-        // 5. vivo / iQOO (OriginOS)
+        // 4. vivo / iQOO (OriginOS)
         if (!launched && isInstalled(pm, "com.bbk.appstore")) {
             launched = tryUri("vivomarket://app_update");
         }
 
-        // 6. 三星 (One UI)
+        // 5. 三星 (One UI)
         if (!launched && isInstalled(pm, "com.sec.android.app.samsungapps")) {
             launched = tryUri("samsungapps://AppUpdates");
         }
 
-        // 7. 通用兜底（如果上述未匹配，直接安全拉起对应市场的原生入口）
+        // 6. 通用兜底（如果上述未匹配，直接安全拉起对应市场的原生入口）
         if (!launched) {
             String[] markets = {
-                "com.xiaomi.market", "com.huawei.appmarket", "com.hihonor.appmarket",
-                "com.heytap.market", "com.oppo.market", "com.bbk.appstore",
-                "com.sec.android.app.samsungapps", "com.android.vending"
+                "com.xiaomi.market", "com.hihonor.appmarket", "com.heytap.market",
+                "com.oppo.market", "com.bbk.appstore", "com.sec.android.app.samsungapps",
+                "com.android.vending"
             };
             for (String pkg : markets) {
                 if (isInstalled(pm, pkg)) {
