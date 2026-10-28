@@ -31,13 +31,16 @@ flowchart TD
     Vivo -- "存在" --> TryVivo["尝试 vivomarket://app_update"]
     Vivo -- "不存在" --> Samsung{"探测 com.sec.android.app.samsungapps"}
     Samsung -- "存在" --> TrySamsung["尝试 samsungapps://AppUpdates"]
-    Samsung -- "不存在" --> Fallback["通用兜底：按优先级启动系统预装市场主入口"]
+    Samsung -- "不存在" --> Sony{"探测 com.fm.mstore.sony / com.meizu.mstore"}
+    Sony -- "存在" --> TrySony["尝试 com.meizu.flyme.appcenter.app.update"]
+    Sony -- "不存在" --> Fallback["通用兜底：按优先级启动系统预装市场主入口"]
     
     TryMi --> Finish["finish() 退出进程"]
     TryHonor --> Finish
     TryOppo --> Finish
     TryVivo --> Finish
     TrySamsung --> Finish
+    TrySony --> Finish
     Fallback --> Finish
 ```
 

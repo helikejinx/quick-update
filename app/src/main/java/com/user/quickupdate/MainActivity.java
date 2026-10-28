@@ -45,12 +45,17 @@ public class MainActivity extends Activity {
             launched = tryUri("samsungapps://AppUpdates");
         }
 
-        // 6. 通用兜底（如果上述未匹配，直接安全拉起对应市场的原生入口）
+        // 6. 索尼 (Xperia 国行定制) / 魅族 (Flyme)
+        if (!launched && (isInstalled(pm, "com.fm.mstore.sony") || isInstalled(pm, "com.meizu.mstore"))) {
+            launched = tryIntent(new Intent("com.meizu.flyme.appcenter.app.update"));
+        }
+
+        // 7. 通用兜底（如果上述未匹配，直接安全拉起对应市场的原生入口）
         if (!launched) {
             String[] markets = {
-                "com.xiaomi.market", "com.hihonor.appmarket", "com.heytap.market",
-                "com.oppo.market", "com.bbk.appstore", "com.sec.android.app.samsungapps",
-                "com.android.vending"
+                "com.xiaomi.market", "com.fm.mstore.sony", "com.meizu.mstore",
+                "com.hihonor.appmarket", "com.heytap.market", "com.oppo.market",
+                "com.bbk.appstore", "com.sec.android.app.samsungapps", "com.android.vending"
             };
             for (String pkg : markets) {
                 if (isInstalled(pm, pkg)) {

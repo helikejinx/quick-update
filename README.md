@@ -23,6 +23,7 @@
   * **0 后台驻留**：呼起系统商店后立即 `finish()` 退出进程，不消耗任何电量与内存。
 * **📱 厂商应用商店适配（实测状态）**：
   * **小米 / 红米 (Xiaomi / Redmi / POCO)**：HyperOS / MIUI 专属协议直达【已真机实测通过】。
+  * **索尼 / 魅族 (Sony Xperia / Meizu Flyme)**：Flyme 应用中心专属协议直达【已真机实测通过】。
   * **OPPO / 一加 / realme**：ColorOS 软件商店专属协议直达【待真机验证】。
   * **vivo / iQOO**：OriginOS 应用商店专属协议直达【待真机验证】。
   * **荣耀 (Honor)**：MagicOS 荣耀应用市场直达【待真机验证】。
