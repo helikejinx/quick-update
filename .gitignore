@@ -12,3 +12,11 @@ local.properties
 bin/
 *.keystore
 !debug.keystore
+
+# Security
+*.jks
+key.properties
+
+# Video generation output
+video_output/
+video_assets/
