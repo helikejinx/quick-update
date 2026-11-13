@@ -17,12 +17,12 @@ SCENES = [
         "id": 1,
         "tag": "痛点揭秘 · 为什么总是红点满天飞？",
         "title": "手机从来不自动更新？",
-        "subtitle": "明明开了空闲+Wi-Fi，为何还是积压96+待更新？",
-        "text": "你是不是也经常纳闷：明明开启了空闲加 Wi-Fi 自动更新，为什么应用从来不更新，每次打开商店都堆了几十上百个小红点？",
+        "subtitle": "明明开了空闲+Wi-Fi，为何还是积压几十个更新？",
+        "text": "你是不是也经常纳闷：明明开启了 Wi-Fi 闲时自动更新，为什么应用从来不更新，每次打开商店都堆了几十上百个小红点？",
         "cards": [
-            ("🚨 待更新应用堆积如山", "系统常年显示：96 个应用等待更新..."),
+            ("🚨 待更新应用堆积如山", "系统常年显示：数十个应用等待更新..."),
             ("📉 自动更新形同虚设", "无论放多久，应用从来不会主动更新"),
-            ("🤯 红点强迫症晚期", "每次必须手动一个个点，极度心累")
+            ("🤯 强迫症极其难受", "每次必须手动一个个点，极度心累")
         ],
         "badge_color": "#FF4D4F"
     },
@@ -30,11 +30,11 @@ SCENES = [
         "id": 2,
         "tag": "底层排查 · 调度器到底卡在哪里？",
         "title": "暗藏三大严苛硬性门槛",
-        "subtitle": "深挖系统底层 JobScheduler，真相触目惊心！",
+        "subtitle": "深挖系统底层 JobScheduler，真相令人无语！",
         "text": "深挖底层调度才发现，厂商暗藏了三大严苛门槛：必须插着充电器、必须半夜凌晨两点到六点、还必须手机完全静止，只要漏掉一个就彻底罢工！",
         "cards": [
             ("🔌 必须处于充电状态", "Requires Charging: 只要没插充电线，任务直接挂起"),
-            ("🌙 仅限凌晨深睡时段", "Timing Delay: 锁定在凌晨 2:00 ~ 6:00 时间窗口"),
+            ("🌙 仅限凌晨深睡时段", "Timing Window: 严格锁定在凌晨 2:00 ~ 6:00 时间窗口"),
             ("🛑 必须进入 Deep Doze", "Device Idle: 手机必须长时间完全静止，轻微晃动即打断")
         ],
         "badge_color": "#FAAD14"
@@ -44,7 +44,7 @@ SCENES = [
         "tag": "恶心体验 · 手动更新步步是坑",
         "title": "手动更新到底有多烦？",
         "subtitle": "每一步都在挑战耐心与注意力",
-        "text": "而每次手动点进去，不仅要等几秒恶心的摇一摇开屏广告，还要关掉乱七八糟的推荐弹窗，极其烦人！",
+        "text": "而每次手动点进应用商店，不仅要等 5 秒恶心的摇一摇开屏广告，还要关掉乱七八糟的推荐弹窗，极其烦人！",
         "cards": [
             ("💢 恶心的开屏摇一摇", "稍微一动就误触跳转第三方电商平台"),
             ("💢 广告弹窗满天飞", "必须手动连关两三个全屏推广弹窗"),
@@ -56,38 +56,34 @@ SCENES = [
         "id": 4,
         "tag": "开源神器 · QuickUpdate 闪亮登场",
         "title": "QuickUpdate 一键更新",
-        "subtitle": "极简 12 KB，专治自动更新不干活！",
-        "text": "为了彻底干掉繁琐，我们做了一款开源小神器——QuickUpdate 一键更新！整个安装包仅有 12 KB，零权限、零后台、零广告！",
+        "subtitle": "极简 8.8 KB，专治自动更新不干活！",
+        "text": "为了彻底干掉繁琐，我们做了一款开源小神器——QuickUpdate 一键更新！整个安装包仅有 8.8 KB，零权限、零后台、零广告！",
         "cards": [
-            ("📦 仅 12 KB 极致轻量", "100% 纯 Java 字节码，彻底剥离冗余架构库"),
+            ("📦 仅 8.8 KB 极致轻量", "纯原生极简构建，比一张表情包还要小几十倍"),
             ("🛡️ 0 权限声明 · 绝不越界", "无联网、无读取文件、无敏感权限，纯本地透明运行"),
-            ("⚡ 0.1秒极速响应", "点击瞬间即刻呼起，用完自动退出，零后台占用")
+            ("⚡ 0.01 秒极速响应", "透明跳板技术，呼起即退，零后台常驻")
         ],
         "badge_color": "#1890FF"
     },
     {
         "id": 5,
-        "tag": "硬核体验 · 全安卓品牌通用自适应",
-        "title": "戳一下，秒开直达",
-        "subtitle": "跨品牌自动匹配官方应用商店协议",
-        "text": "在桌面戳一下，0.1 秒透明跳板直达系统更新列表，点击全部升级即刻搞定！小米、OPPO、vivo、荣耀等主流安卓品牌通用！",
-        "cards": [
-            ("⚡ 小米 / 红米 (HyperOS / MIUI)", "专属 Intent 协议直达更新列表"),
-            ("⚡ 荣耀 / 三星 (MagicOS / One UI)", "自适应呼起官方市场升级页"),
-            ("⚡ OPPO / vivo (ColorOS / OriginOS)", "无缝兼容主流各家系统应用中心")
-        ],
+        "tag": "真机实测 · 小米 HyperOS 现场演示",
+        "title": "戳一下，秒开直达！",
+        "subtitle": "跳过所有开屏广告，瞬间拉起更新列表",
+        "text": "在桌面戳一下图标，0.01 秒透明跳板直达系统更新列表，点击全部升级即刻搞定！小米、OPPO、vivo、荣耀、索尼等主流品牌全适配！",
+        "cards": [],
         "badge_color": "#52C41A"
     },
     {
         "id": 6,
         "tag": "开源发布 · 免费获取与体验",
         "title": "现已全面开源发布！",
-        "subtitle": "GitHub 搜索 quick-update 即可下载",
-        "text": "项目现已在 GitHub 全面开源并发布首个版本，代码透明，快去 Releases 下载体验吧！",
+        "subtitle": "GitHub 与 JustToyBox 官网均可免费下载",
+        "text": "项目现已在 GitHub 全面开源并发布 v1.1.0 正式版，纯粹极客手作，代码完全透明，快去下载体验吧！",
         "cards": [
             ("⭐ GitHub 开源项目", "https://github.com/helikejinx/quick-update"),
-            ("📦 Releases v1.0.0 已发布", "提供已签名的免编译 APK，即下即用"),
-            ("💡 纯粹极客精神", "MIT License，欢迎 Star、Issue 与贡献代码")
+            ("📦 Releases v1.1.0 现已发布", "提供官方独立签名的轻量 APK，即下即用"),
+            ("🌐 妙具盒官网高速直链", "JustToyBox 官网支持手机扫码一键直下")
         ],
         "badge_color": "#722ED1"
     }
@@ -144,34 +140,45 @@ def create_scene_image(scene, output_path):
     # Separator
     draw.line([(70, 460), (1010, 460)], fill=(51, 65, 85, 255), width=2)
 
-    # Content Cards
-    card_y = 510
-    card_h = 240
-    gap = 40
-    for title, desc in scene["cards"]:
-        # Card background
+    # Content Cards or Real Device Mockup
+    if scene["id"] == 5:
+        # Phone frame placeholder
         draw.rounded_rectangle(
-            [70, card_y, 1010, card_y + card_h],
-            radius=24,
-            fill=(30, 41, 59, 240),
-            outline=(51, 65, 85, 255),
-            width=2
+            [305, 480, 775, 1500],
+            radius=28,
+            fill=(10, 15, 30, 255),
+            outline=badge_color,
+            width=4
         )
-        # Left highlight bar
-        draw.rounded_rectangle(
-            [70, card_y, 82, card_y + card_h],
-            radius=6,
-            fill=badge_color
-        )
-        draw.text((110, card_y + 40), title, font=f_card_t, fill=(241, 245, 249))
-        draw.text((110, card_y + 120), desc, font=f_card_d, fill=(148, 163, 184))
-        card_y += card_h + gap
+        draw.text((810, 800), "小米 HyperOS", font=f_tag, fill=(148, 163, 184))
+        draw.text((810, 860), "1080P 真机实录", font=f_sub, fill=(52, 196, 26))
+        draw.text((810, 1020), "0 毫秒透明跳板", font=f_tag, fill=(56, 189, 248))
+        draw.text((810, 1080), "直达系统更新页", font=f_sub, fill=(255, 255, 255))
+    else:
+        card_y = 510
+        card_h = 240
+        gap = 40
+        for title, desc in scene["cards"]:
+            draw.rounded_rectangle(
+                [70, card_y, 1010, card_y + card_h],
+                radius=24,
+                fill=(30, 41, 59, 240),
+                outline=(51, 65, 85, 255),
+                width=2
+            )
+            draw.rounded_rectangle(
+                [70, card_y, 82, card_y + card_h],
+                radius=6,
+                fill=badge_color
+            )
+            draw.text((110, card_y + 40), title, font=f_card_t, fill=(241, 245, 249))
+            draw.text((110, card_y + 120), desc, font=f_card_d, fill=(148, 163, 184))
+            card_y += card_h + gap
 
     # Bottom Subtitle Banner
     draw.rounded_rectangle([60, 1550, 1020, 1820], radius=30, fill=(15, 23, 42, 245), outline=(56, 189, 248, 200), width=3)
     draw.text((90, 1575), "🎙️ AI 旁白解读", font=f_tag, fill=(56, 189, 248))
     
-    # Wrap subtitle text
     words = scene["text"]
     line1 = words[:20]
     line2 = words[20:42] if len(words) > 20 else ""
@@ -187,6 +194,7 @@ def create_scene_image(scene, output_path):
 async def main():
     print("=== 开始全自动制作短视频 ===")
     clip_files = []
+    real_demo_path = os.path.join(ASSETS_DIR, "real_demo.mp4")
     
     for scene in SCENES:
         sid = scene["id"]
@@ -196,7 +204,6 @@ async def main():
         audio_path = os.path.join(ASSETS_DIR, f"scene_{sid}.mp3")
         await generate_tts(scene["text"], audio_path)
         duration = get_audio_duration(audio_path)
-        # 给画面稍微留白 0.3 秒，让转场更自然
         clip_duration = duration + 0.3
         print(f"  - 语音合成完成: {duration:.2f}s, 设定片段时长: {clip_duration:.2f}s")
 
@@ -207,17 +214,38 @@ async def main():
 
         # 3. 渲染单场景视频
         clip_path = os.path.join(ASSETS_DIR, f"clip_{sid}.mp4")
-        cmd_render = [
-            "ffmpeg", "-y",
-            "-loop", "1", "-i", img_path,
-            "-i", audio_path,
-            "-c:v", "libx264", "-tune", "stillimage",
-            "-c:a", "aac", "-b:a", "192k",
-            "-pix_fmt", "yuv420p",
-            "-t", f"{clip_duration:.2f}",
-            "-vf", "scale=1080:1920,setsar=1",
-            clip_path
-        ]
+        
+        if sid == 5 and os.path.exists(real_demo_path):
+            print(f"  - 正在合成真机录屏至场景 5...")
+            cmd_render = [
+                "ffmpeg", "-y",
+                "-loop", "1", "-i", img_path,
+                "-ss", "0.3", "-i", real_demo_path,
+                "-i", audio_path,
+                "-filter_complex",
+                "[1:v]scale=450:1000:force_original_aspect_ratio=decrease,pad=450:1000:(ow-iw)/2:(oh-ih)/2:black[phone];"
+                "[0:v][phone]overlay=315:490:shortest=0[v]",
+                "-map", "[v]",
+                "-map", "2:a",
+                "-c:v", "libx264",
+                "-c:a", "aac", "-b:a", "192k",
+                "-pix_fmt", "yuv420p",
+                "-t", f"{clip_duration:.2f}",
+                clip_path
+            ]
+        else:
+            cmd_render = [
+                "ffmpeg", "-y",
+                "-loop", "1", "-i", img_path,
+                "-i", audio_path,
+                "-c:v", "libx264", "-tune", "stillimage",
+                "-c:a", "aac", "-b:a", "192k",
+                "-pix_fmt", "yuv420p",
+                "-t", f"{clip_duration:.2f}",
+                "-vf", "scale=1080:1920,setsar=1",
+                clip_path
+            ]
+            
         subprocess.run(cmd_render, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
         print(f"  - 视频片段渲染完成: {clip_path}")
         clip_files.append(clip_path)
@@ -235,7 +263,9 @@ async def main():
         "ffmpeg", "-y",
         "-f", "concat", "-safe", "0",
         "-i", concat_list_path,
-        "-c", "copy",
+        "-c:v", "libx264",
+        "-c:a", "aac",
+        "-pix_fmt", "yuv420p",
         final_mp4
     ]
     subprocess.run(cmd_concat, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
